@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inputs</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <h1>Probando El h1</h1>
+
+    <input type="text" value="Texto Predeterminado">
+
+    <img src="https://fotografias.lasexta.com/clipping/cmsimages01/2022/04/19/23DC124E-BFF5-4B16-8824-DE16504D1A19/simpson-series-animadas-mas-longevas-television-nacio-casualidad_98.jpg?crop=1024,576,x0,y0&width=1900&height=1069&optimize=low&format=webply" alt="Los-Simpson-2">
+
+    <script>
+        
+        // Accediendo al Nodo/objeto h1
+        let h1 = document.querySelector('h1')
+        //Mostrando toda la etiqueta h1
+        console.log(h1)
+        //Mostrando solo el texto contenido en el nodo h1
+        console.log(h1.innerText)
+        console.log(h1.textContent)
+
+        // Accediendo al Nodo/Objeto input - Para mostrar sus propiedad/atributos/datos
+        let input = document.querySelector('input')
+        // Mostrando el Contenido completo del Nodo input
+        console.log(input)
+        // Mostrado la propiedad contenida .value del Nodo/objeto 'input'
+        console.log(input.value)
+
+        let img = document.querySelector('img')
+        // Obteniendo la imagen como Objeto/NODO/etiqueta
+        console.log(img)
+        // Obteniendo la direccion de la imagen 
+        console.log(img.src)
+        // Obteniendo la descripcion/atributo de la imagen 
+        console.log(img.alt)
+        // Otra forma de Obtener el atributo - BUENA PRACTICA
+        console.log(img.getAttribute('src'))
+        console.log(img.getAttribute('alt'))
+
+        // Cambiando/Pisando el atributo src del NODO/etiqueta/Objeto 'img' 
+        //NOTA: Hace una Copia por Valor, Cambia/pisa un dato String por otro (cambia datos primitivos)
+        img.src = 'https://www.abc.es/media/temporadas/000/014/566/los-simpson-1.jpg'
+
+        // Otra forma de Cambiando/Pisando el atributo src del NODO/etiqueta/Objeto 'img' - BUENA PRACTICA
+        img.setAttribute('src','https://beersandpolitics.com/wp-content/uploads/2020/09/ScreenShot015.jpg' )
+        
+
+    </script>
+</body>
+
+</html>
